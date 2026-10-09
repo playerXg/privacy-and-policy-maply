@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informativa sulla Privacy - ScoutY</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-color: #00c2ff;
+            --border-color: #334155;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background-color: var(--card-bg);
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-color);
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .subtitle {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--border-color);
+            margin: 24px 0;
+        }
+
+        h2 {
+            font-size: 1.15rem;
+            color: var(--accent-color);
+            margin-top: 24px;
+            margin-bottom: 8px;
+        }
+
+        p, ul {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .footer {
+            margin-top: 32px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Informativa sulla Privacy (GDPR UE 2016/679)</h1>
+    <div class="subtitle">Ultimo aggiornamento: Ottobre 2026</div>
+    <hr>
+
+    <h2>1. Titolare del Trattamento</h2>
+    <p>L'applicazione ScoutY (di seguito "App") è gestita dal rispettivo team di sviluppo. Per qualsiasi chiarimento o esercizio dei diritti in materia di protezione dei dati personali, è possibile contattare il Titolare tramite la funzione di Feedback integrata nell'App.</p>
+
+    <h2>2. Tipologia di Dati Raccolti</h2>
+    <p>L'App raccoglie ed elabora le seguenti categorie di dati personali:</p>
+    <ul>
+        <li><strong>Dati di identificazione:</strong> Indirizzo e-mail e Identificatore Utente (UID) forniti in fase di registrazione via Firebase Authentication.</li>
+        <li><strong>Dati di Geolocalizzazione:</strong> Posizione GPS in tempo reale del dispositivo (previo consenso esplicito dell'utente) utilizzata esclusivamente per mostrare la mappa, sbloccare i Punti di Interesse (POI) e registrare scoperte.</li>
+        <li><strong>Contenuti Generati dall'Utente:</strong> Foto, note, titoli, recensioni e segnalazioni inviate dall'utente relativamente ai luoghi visitati.</li>
+        <li><strong>Dati Tecnici e Diagnostici:</strong> Informazioni sulle prestazioni, log di sistema e feedback inviati per la risoluzione di bug.</li>
+    </ul>
+
+    <h2>3. Finalità del Trattamento</h2>
+    <p>I dati raccolti vengono trattati per le seguenti finalità:</p>
+    <p>
+        a) <strong>Erogazione del servizio:</strong> consentire la creazione dell'account, l'esplorazione geografica, il tracciamento progressi (XP) e la condivisione/salvataggio dei POI.<br>
+        b) <strong>Gestione del supporto e feedback:</strong> elaborare le segnalazioni di bug e suggerimenti tramite notifiche via e-mail (EmailJS).<br>
+        c) <strong>Sicurezza e prevenzione abusi:</strong> garantire la protezione degli account e prevenire utilizzi impropri delle funzionalità dell'App.
+    </p>
+
+    <h2>4. Base Giuridica del Trattamento</h2>
+    <p>Il trattamento dei dati personali si fonda su:</p>
+    <ul>
+        <li><strong>Consenso dell'Utente:</strong> espresso all'attivazione dei permessi di geolocalizzazione e all'invio volontario di foto e feedback.</li>
+        <li><strong>Esecuzione di un contratto:</strong> necessario per la registrazione e il funzionamento standard dei servizi offerti dall'App.</li>
+    </ul>
+
+    <h2>5. Conservazione e Archiviazione dei Dati</h2>
+    <ul>
+        <li><strong>Dati Locali:</strong> Le preferenze, i report e le informazioni sui POI esplorati possono essere salvati in locale sul dispositivo tramite database crittografati/SharedPreferences.</li>
+        <li><strong>Dati Cloud:</strong> I dati di autenticazione e sincronizzazione sono conservati in modo sicuro sui server di Google Firebase.</li>
+        <li><strong>Durata:</strong> I dati personali sono conservati per la sola durata dell'esistenza dell'account dell'utente.</li>
+    </ul>
+
+    <h2>6. Diritti dell'Utente (Art. 15-22 GDPR)</h2>
+    <p>L'utente ha il diritto in qualsiasi momento di:</p>
+    <ul>
+        <li>Accedere ai propri dati personali e chiederne la rettifica o l'aggiornamento.</li>
+        <li>Chiedere la cancellazione definitiva dei propri dati ("Diritto all'oblio").</li>
+        <li>Revocare in qualsiasi momento il consenso alla geolocalizzazione dalle impostazioni del sistema operativo.</li>
+    </ul>
+    <p>L'utente può esercitare il diritto di cancellazione immediata di tutti i propri dati locali e cloud direttamente dalla sezione Impostazioni tramite la funzione "Elimina Account".</p>
+
+    <h2>7. Modifiche alla presente Privacy Policy</h2>
+    <p>Ci riserviamo il diritto di apportare modifiche alla presente Informativa sulla Privacy in qualsiasi momento. Eventuali aggiornamenti saranno pubblicati direttamente all'interno dell'App e su questa pagina web.</p>
+
+    <div class="footer">
+        © 2026 ScoutY App. Tutti i diritti riservati.
+    </div>
+</div>
+
+</body>
+</html>
