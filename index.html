@@ -96,26 +96,26 @@
     <h2>2. Tipologia di Dati Raccolti e Permessi Richiesti</h2>
     <p>L'App raccoglie ed elabora le seguenti categorie di dati personali:</p>
     <ul>
-        <li><strong>Dati di identificazione e profilo:</strong> Indirizzo e-mail, Username, Nome, Foto profilo e Identificatore Utente (UID) forniti in fase di registrazione via Firebase Authentication.</li>
-        <li><strong>Dati di Geolocalizzazione:</strong> Posizione GPS in tempo reale del dispositivo (previo consenso esplicito dell'utente) utilizzata esclusivamente per mostrare la mappa, rilevare la vicinanza ai Punti di Interesse (POI) e sbloccare le scoperte.</li>
+        <li><strong>Dati di identificazione e profilo:</strong> Indirizzo e-mail, Username, Nome, ScoutID, Foto profilo e Identificatore Utente (UID) forniti in fase di registrazione via Firebase Authentication.</li>
+        <li><strong>Dati di Geolocalizzazione (GPS in Background):</strong> ScoutY raccoglie i dati sulla posizione precisa del dispositivo per consentire la visualizzazione della mappa, il tracciamento dei Punti di Interesse (POI) vicini e l'invio delle notifiche di scoperta <strong>ANCHE QUANDO L'APP È CHIUSA O NON IN USO</strong>.</li>
         <li><strong>Attività Fisica (Sensore Passi / Pedometer):</strong> Conteggio dei passi di giornata e storico chilometrico utilizzato per le statistiche personali e gli obiettivi di esplorazione.</li>
         <li><strong>Fotocamera e Galleria Fotografica:</strong> Accesso richiesto per scattare o caricare immagini a riprova delle scoperte sul territorio e per la personalizzazione dell'Avatar del profilo.</li>
-        <li><strong>Contenuti e Funzioni Social:</strong> Titoli equipaggiati, medaglie in vetrina, livello di Rango, punteggio XP, motto personale e interazioni con la propria lista amici.</li>
-        <li><strong>Dati Tecnici e Diagnostici:</strong> Log di sistema, informazioni sulle prestazioni e segnalazioni inviate per la risoluzione di bug.</li>
+        <li><strong>Contenuti, Chat e Funzioni Social:</strong> Messaggi inviati e ricevuti nella chat integrata, richieste di amicizia, titoli equipaggiati, medaglie in vetrina, livello di Rango, punteggio XP, motto personale e interazioni con la propria lista amici.</li>
+        <li><strong>Dati Tecnici e Diagnostici:</strong> Log di sistema, informazioni sulle prestazioni e segnalazioni inviate per la risoluzione di bug o errori.</li>
     </ul>
 
     <h2>3. Servizi di Terze Parti Utilizzati</h2>
     <p>Per l'erogazione dei propri servizi, l'App si avvale delle seguenti piattaforme esterne:</p>
     <ul>
-        <li><strong>Google Firebase (Authentication & Realtime Database):</strong> Per la gestione sicura degli account, l'autenticazione e la sincronizzazione cloud dei progressi.</li>
-        <li><strong>Google Maps / Mapbox API:</strong> Per la visualizzazione delle mappe geografiche e la localizzazione dei POI.</li>
-        <li><strong>EmailJS:</strong> Per la gestione dell'invio di segnalazioni, supporto e feedback agli sviluppatori.</li>
+        <li><strong>Google Firebase (Authentication, Realtime Database, Firestore):</strong> Per la gestione sicura degli account, l'autenticazione, la sincronizzazione della chat e il salvataggio dei progressi nel cloud.</li>
+        <li><strong>OpenStreetMap / Tile Server API:</strong> Per la visualizzazione delle mappe geografiche e il calcolo delle coordinate dei POI.</li>
+        <li><strong>EmailJS:</strong> Per la gestione dell'invio di segnalazioni, supporto e feedback diretti agli sviluppatori.</li>
     </ul>
 
     <h2>4. Finalità e Base Giuridica del Trattamento</h2>
     <p>I dati raccolti vengono trattati per le seguenti finalità:</p>
     <p>
-        a) <strong>Erogazione del servizio:</strong> consentire la creazione dell'account, l'esplorazione territorio, il tracciamento dei progressi (XP), lo sblocco di medaglie/titoli e il salvataggio dei POI.<br>
+        a) <strong>Erogazione del servizio:</strong> consentire la creazione dell'account, l'esplorazione del territorio, il rilevamento dei POI vicini anche in background, il tracciamento dei progressi (XP), lo sblocco di medaglie/titoli e lo scambio di messaggi tra utenti.<br>
         b) <strong>Gestione supporto:</strong> elaborare le segnalazioni di bug e i suggerimenti tramite e-mail o feedback interno.<br>
         c) <strong>Base Giuridica:</strong> Consenso espresso dall'utente all'attivazione dei permessi (GPS, Fotocamera, Attività Fisica) ed esecuzione dei Termini di Servizio dell'App.
     </p>
@@ -123,8 +123,8 @@
     <h2>5. Conservazione e Archiviazione dei Dati</h2>
     <ul>
         <li><strong>Dati Locali:</strong> Le preferenze, lo storico passi e le informazioni sui POI esplorati vengono salvati in locale sul dispositivo tramite database crittografati (Drift) e SharedPreferences.</li>
-        <li><strong>Dati Cloud:</strong> I dati di autenticazione, la lista amici e i progressi di gioco sono conservati in modo sicuro sui server di Google Firebase.</li>
-        <li><strong>Durata:</strong> I dati personali sono conservati esclusivamente per la durata dell'esistenza dell'account dell'utente.</li>
+        <li><strong>Dati Cloud:</strong> I dati di autenticazione, i messaggi di chat, la lista amici e i progressi di gioco sono conservati in modo sicuro sui server di Google Firebase.</li>
+        <li><strong>Durata:</strong> I dati personali e le comunicazioni sono conservati esclusivamente per la durata dell'esistenza dell'account dell'utente o fino alla richiesta di eliminazione.</li>
     </ul>
 
     <h2>6. Diritti dell'Utente e Cancellazione Account (Art. 15-22 GDPR)</h2>
@@ -132,9 +132,9 @@
     <ul>
         <li>Accedere ai propri dati personali e chiederne la rettifica o l'aggiornamento.</li>
         <li>Chiedere la cancellazione definitiva di tutti i propri dati ("Diritto all'oblio").</li>
-        <li>Revocare in qualsiasi momento i permessi di geolocalizzazione, fotocamera o attività fisica dalle impostazioni del sistema operativo.</li>
+        <li>Revocare in qualsiasi momento i permessi di geolocalizzazione (incluso il background), fotocamera o attività fisica dalle impostazioni del sistema operativo.</li>
     </ul>
-    <p>L'utente può esercitare il diritto di cancellazione immediata di tutti i propri dati locali e cloud direttamente dalla sezione Impostazioni dell'App tramite la funzione <strong>"Elimina Account"</strong> o inviando una richiesta e-mail al Titolare del Trattamento.</p>
+    <p>L'utente può esercitare il diritto di cancellazione immediata di tutti i propri dati locali e cloud direttamente dalla sezione Impostazioni dell'App tramite la funzione <strong>"Elimina Account"</strong>, oppure inviando una richiesta e-mail al Titolare del Trattamento all'indirizzo <strong>playerx200423@gmail.com</strong>.</p>
 
     <h2>7. Modifiche alla presente Privacy Policy</h2>
     <p>Ci riserviamo il diritto di apportare modifiche alla presente Informativa sulla Privacy in qualsiasi momento. Eventuali aggiornamenti saranno pubblicati direttamente all'interno dell'App e su questa pagina web.</p>
